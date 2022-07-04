@@ -1,0 +1,27 @@
+<table mat-table [dataSource]="smsList" style="position: inherit; width: 100%; background-color: inherit;">
+  <!-- <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Id</th>
+    <td mat-cell *matCellDef="let sms"> {{sms.id}}</td>
+  </ng-container> -->
+  <ng-container matColumnDef="from">
+    <th mat-header-cell *matHeaderCellDef>From</th>
+    <td mat-cell *matCellDef="let sms"> {{sms.from}}</td>
+  </ng-container>
+  <ng-container matColumnDef="to">
+    <th mat-header-cell *matHeaderCellDef>To</th>
+    <td mat-cell *matCellDef="let sms"> {{sms.to}}</td>
+  </ng-container>
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Status</th>
+    <td mat-cell *matCellDef="let sms"> {{sms.status}}</td>
+  </ng-container>
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let sms"><button mat-flat-button color="primary" (click)="openSMS(sms.id)">
+        Details
+      </button> </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>
+<button mat-flat-button color="primary" style="margin-top: 15px;" (click)="loadSMSList()"> Refresh </button>

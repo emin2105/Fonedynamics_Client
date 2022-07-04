@@ -1,0 +1,30 @@
+<h1>Details</h1>
+<br>
+<div class="parent">
+  <!-- <mat-form-field style="position: inherit; width: 95%;" appearance="fill">
+    <mat-label>Id</mat-label>
+    <input matInput readonly value="{{model.id}}">
+  </mat-form-field>
+  <p></p> -->
+  <mat-form-field style="position: inherit; width: 95%;" appearance="fill">
+    <mat-label>From</mat-label>
+    <input matInput readonly value="{{model.from}}">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field style="position: inherit; width: 95%;" appearance="fill">
+    <mat-label>To</mat-label>
+    <input matInput readonly value="{{model.to}}">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field style="position: inherit; width: 95%;" appearance="fill">
+    <mat-label>Status</mat-label>
+    <input matInput readonly value="{{model.status}}">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field style="position: inherit; width: 95%;" appearance="fill">
+    <mat-label>Content</mat-label>
+    <textarea matInput readonly value="{{model.content}}"></textarea>
+  </mat-form-field>
+</div>
+<button mat-flat-button color="primary" style="margin-top: 15px;" (click)="returnToTable()"> Return
+</button>
